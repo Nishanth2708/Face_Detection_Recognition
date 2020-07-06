@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import os
+import time
 
 #Detection
 print('Git is working')
@@ -17,11 +18,14 @@ id = 0
 names = ['None', 'Nishanth']
 # Initialize and start realtime video capture
 cam = cv2.VideoCapture(0)
+
 cam.set(3, 640)  # set video widht
 cam.set(4, 480)  # set video height
 # Define min window size to be recognized as a face
 minW = 0.05 * cam.get(3)
 minH = 0.05 * cam.get(4)
+
+start = time.time()
 while True:
     ret, img = cam.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -62,7 +66,11 @@ while True:
             (255, 255, 0),
             1
         )
-#
+        end = time.time()
+        print(
+        'fps:', int(round(1 / (end - start))))
+        start = time.time()
+
     # cv2.imshow('camera', img)
     k = cv2.waitKey(10) & 0xff  # Press 'ESC' for exiting video
     if k == 27:
