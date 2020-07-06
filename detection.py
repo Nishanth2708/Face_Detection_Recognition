@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 
+print('Git is working')
 
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
