@@ -62,7 +62,7 @@ while True:
             (255, 255, 0),
             1
         )
-
+#
     # cv2.imshow('camera', img)
     k = cv2.waitKey(10) & 0xff  # Press 'ESC' for exiting video
     if k == 27:
