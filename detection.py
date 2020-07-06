@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import os
+
 #Detection
 print('Git is working')
 
@@ -62,7 +63,7 @@ while True:
             1
         )
 
-    cv2.imshow('camera', img)
+    # cv2.imshow('camera', img)
     k = cv2.waitKey(10) & 0xff  # Press 'ESC' for exiting video
     if k == 27:
         break

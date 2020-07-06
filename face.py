@@ -3,8 +3,8 @@ import os
 from PIL import Image
 import numpy as np
 
-# os.mkdir('dataset')
-# os.mkdir('trainer')
+os.mkdir('dataset')
+os.mkdir('trainer')
 
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) # set video width
